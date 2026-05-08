@@ -423,6 +423,11 @@ body {
   box-shadow: var(--shadow);
 }
 
+.bg_contact img {
+  height: 100%;
+  object-fit: cover !important;
+}
+
 .form_contact {
   margin-top: 3rem !important;
   margin-bottom: 3rem !important;
@@ -945,11 +950,6 @@ body {
   /** end clothing section **/
 
   /** contact section **/
-  .bg_contact img {
-    height: 100%;
-    object-fit: cover !important;
-  }
-
   .form_contact {
     margin: 0 !important;
   }
