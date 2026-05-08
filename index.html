@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/logo1.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hermanos del Calvario</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+  <script>
+    window.onscroll = function () {
+      const mybutton = document.getElementById("myBtn");
+
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+
+
+      const imagen = document.getElementById("miImagen");
+
+      if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        imagen.classList.remove("logo-header");
+        imagen.classList.add("pqueña");
+      } else {
+        imagen.classList.remove("pqueña");
+        imagen.classList.add("logo-header");
+      }
+
+
+      const menu = document.querySelector('.navbar-items');
+      // const btn = document.querySelector('.navbar-toggler');
+      const links = document.querySelectorAll('.nav-item');
+
+      links.forEach(link => {
+        link.addEventListener('click', () => {
+          menu.classList.remove('show'); // Oculta el menú
+          // btn.classList.add('collapsed');
+        });
+      });
+    };
+  </script>
+</body>
+
+</html>
